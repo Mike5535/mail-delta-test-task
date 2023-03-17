@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import* as React from 'react'
-import SmokeText from '../SmokeText';
+import SmokeText from './SmokeText';
 
 describe('SmokeText test component', () => {
     it('should render correctly', () => {
@@ -18,6 +18,6 @@ describe('SmokeText test component', () => {
         const { container } = render(<SmokeText>Москва</SmokeText>);
         const span = container.querySelector('span');
 
-        expect(span.shadowRoot).toHaveTextContent(/м.*о.*с.*к.*в.*а/i);
+        expect(span?.shadowRoot).toHaveTextContent(/м.*о.*с.*к.*в.*а/i);
     });
 });

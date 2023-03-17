@@ -2,14 +2,23 @@
   "compilerOptions": {
     "jsx": "react",
     "module": "commonjs",
+    "skipLibCheck": true,
     "lib": [
       "dom",
       "es2017"
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "smokescreen/*": ["libs/smokescreen/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "smokescreen/*": [
+        "libs/smokescreen/*"
+      ]
     }
-  }
+  },
+  "exclude": [
+    "./src/components/base/*.test.tsx",
+    "./node_modules/"
+  ]
 }

@@ -8,7 +8,6 @@ const removeStyle = (style) => {
 };
 
 const insertStyle = (locator, sheet) => {
-	console.log(locator.insertSheet(sheet))
 	return locator.insertSheet(sheet);
 };
 
