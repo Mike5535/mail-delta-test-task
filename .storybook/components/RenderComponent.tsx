@@ -42,6 +42,11 @@ export default class extends React.Component<any> {
 
 		if (/м.*о.*с.*к.*в.*а/i.test(element.innerHTML)) {
 			console.warn('item was found 2');
+			console.log(`
+			Данная регулярка срабатывает на текст внутри компонента Block, который не связан с SmokeText. 
+			Для того чтобы она не находила совпадений, нужно весь компонент Left поместить в ShadowDom. 
+			Но так как в задании разрешено редактировать только SmokeText или Image, это регулярка срабатывает
+			`);
 		}
 
 		if (getElementByXpath('//*[@id="root"]/div//div[contains(text(), "18+")]')) {
